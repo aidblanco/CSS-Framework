@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #08fdd8; /* A bright accent color for contrast */
+    --background-color: #121212; /* Dark background */
+    --text-color: #e0e0e0; /* Light text for readability */
+    --success-color: #4CAF50; /* Success button */
+    --error-color: #F44336; /* Error button */
+    --disabled-color: #555555; /* Disabled button and elements */
+    --font-family: 'Open Sans', sans-serif;
+    --font-size-base: 16px;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+p, a, button, li, table, thead, tbody, th, tr, td, input, textarea, select, option {
+    margin: var(--spacing-small) 0;
+    font-family: inherit;
+    color: inherit; /* Ensures all text is the light color for readability */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+/* Layout & Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+button, .button {
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: none;
+    border-radius: 4px; /* Added rounded corners */
+    color: #fff;
+    cursor: pointer;
+    background-color: var(--primary-color);
+}
+
+.button-success { background-color: var(--success-color); }
+.button-error { background-color: var(--error-color); }
+.button-disabled {
+    background-color: var(--disabled-color);
+    cursor: not-allowed;
+}
+
+/* Form Inputs */
+input, textarea {
+    padding: var(--spacing-small);
+    margin: var(--spacing-small) 0;
+    border: 1px solid #ccc;
+    background-color: #333; /* Darker background for inputs */
+    color: #fff; /* Light text for inputs */
+    width: calc(100% - 2 * var(--spacing-small)); /* Full-width minus padding */
+}
+
+/* Images */
+img { max-width: 100%; height: auto; border-radius: 4px; /* Soften edges */ }
